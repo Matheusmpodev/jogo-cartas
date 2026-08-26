@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game de cartas</title>
+    <link rel="stylesheet" href="front-stilização.css">
+</head>
+<body>
+
+    <div class="tela-inicial" id="tela-inicial">
+        <button id="botao-jogar-inicial" class="botao-jogar" onclick="comecarPartida()">Jogar</button>
+    </div>
+
+    <!-- A mão do personagem 2  -->
+    <div class="secao-mao topo"> <!-- div que vai conter as cartas da mão do jogador 2 inteira, classe dele é secao_mao  e secao_mao topo-->
+        <div class="info-mao">
+            <span id="baralho-p2">Baralho: 22</span> <!-- span é tipo uma div so que pra texto que fica pequeno la na linha mostrando o numero do baralho-->
+            <span id="escudo-p2"></span> <!-- mesma coisa mas aqui vai falar escudo e o outro o veneno-->
+            <span id="veneno-p2"></span>
+        </div>
+        <div class="mao" id="mao-p2"></div> <!-- nessa div aqui que vai ser inserido as cartas, dps q o jogo começa pq o js que vai dar elas-->
+    </div>
+
+   
+    <div class="arena"> 
+        <div class="personagem-wrapper esquerda">
+            <div class="vida-info">
+                <img class="barra-vida" id="vida-p1" src="imagens/vida/vida 01.png" alt="Vida P1">
+                <span class="vida-texto" id="texto-vida-p1">100 / 100</span>
+            </div>
+
+            <div class="personagem" id="personagem1">
+                <img src="imagens/gato.gif" alt="P1">
+            </div>
+        </div>
+
+        
+        <div class="centro"> 
+            <p class="turno" id="turno-texto">Pressione Iniciar</p> 
+            <button id="botao-iniciar" onclick="iniciarJogo()">Iniciar Jogo</button> 
+            <div class="log" id="log"></div> 
+        </div>
+
+        
+        <div class="personagem-wrapper direita">
+            <div class="vida-info">
+                <img class="barra-vida" id="vida-p2" src="imagens/vida/vida 01.png" alt="Vida P2">
+                <span class="vida-texto" id="texto-vida-p2">100 / 100</span>
+            </div>
+
+            <div class="personagem" id="personagem2">
+                <img src="imagens/caré.gif" alt="P2">
+            </div>
+        </div>
+
+    </div>
+
+    
+    <div class="secao-mao baixo">
+        <div class="mao" id="mao-p1"></div>
+        <div class="info-mao">
+            <span id="baralho-p1">Baralho: 20</span>
+            <span id="escudo-p1"></span>
+            <span id="veneno-p1"></span>
+        </div>
+    </div>
+
+    <div class="overlay-fim" id="overlay-fim" onclick="fecharMensagemFinal()">
+        <div class="overlay-fim-conteudo">
+            <p class="overlay-fim-texto" id="overlay-fim-texto"></p>
+            <span class="overlay-fim-dica">(clique para continuar)</span>
+        </div>
+    </div>
+
+    <script src="front.js"></script>
+</body>
+</html>
