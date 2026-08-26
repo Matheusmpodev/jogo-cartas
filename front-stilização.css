@@ -6,7 +6,7 @@
 
 body {
     background-color: #1a1a2e; /* cor de reserva, caso o gif não carregue */
-    background-image: url('imagens/fundoprojeto.gif');
+    background-image: url('imagens/fundoprojeto.jpg');
     background-size: cover;          /* cobre a tela toda */
     background-position: center;     /* centraliza */
     background-repeat: no-repeat;    /* não repete em ladrilho */
